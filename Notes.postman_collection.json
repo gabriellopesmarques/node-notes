@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "2d3c270c-0477-4c95-a645-1a5a8ecc6354",
+		"name": "Notes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/note",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/note/5d50880ac469a50c2ca4ed86",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"note",
+						"5d50880ac469a50c2ca4ed86"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"My First Note\",\n\t\"content\": \"Welcome! This is yout first note. Edit or delete it, then start writing!\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/note",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"My First Note (Edited)\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/note/5d50880ac469a50c2ca4ed86",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"note",
+						"5d50880ac469a50c2ca4ed86"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/note/5d50880ac469a50c2ca4ed86",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"note",
+						"5d50880ac469a50c2ca4ed86"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
